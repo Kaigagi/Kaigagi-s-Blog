@@ -8,7 +8,7 @@ const app = express();
 const dbURI ="mongodb+srv://kaigagi:Quan12345@cluster0.0q0cp.mongodb.net/KaigagiBlog?retryWrites=true&w=majority"
 mongoose.connect(dbURI,{useNewUrlParser:true,useUnifiedTopology:true})
     .then((result) => {
-        app.listen(evn.process.$PORT)
+        app.listen($PORT)
         console.log("listening on port 3000");
     }).catch((err) => {
         console.log(err);
