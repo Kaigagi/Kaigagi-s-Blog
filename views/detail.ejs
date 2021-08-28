@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog's Detail</title>
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../detail-content.css">
+    <link rel="stylesheet" href="../footer.css">
+</head>
+<body>
+    <%- include('./particals/header.ejs') %>
+    <div class="content">
+        <div class="title"><%= blog.title %> </div>
+        <div class="body"><%= blog.body %></div>
+    </div>
+    <a class="delete" data-id="<%= blog.id %> ">Delete Blog</a>
+    <%- include('./particals/footer.ejs') %>
+    <script>
+        const deleteButton = document.querySelector('a.delete');
+        const id = deleteButton.dataset.id;
+        const endpoint = "/detail/"+id;
+        deleteButton.addEventListener("click",()=>{
+            console.log(1)
+            fetch(endpoint,{
+                method: "DELETE"
+            })
+            .then((result)=>{
+                result.json()
+                .then((data)=>{
+                    window.location.href = data.redirect
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+        })
+    </script>
+</body>
+</html>

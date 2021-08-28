@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="index-content.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Blog</title>
+</head>
+<body>
+    <%- include('./particals/header.ejs') %>
+    <div class="content" style="height: <%= blogs.length*5+"em" %>;">
+        <% for (let i = 0; i < blogs.length; i++) {%>
+            <a class="blog" href="/detail/<%= blogs[i].id %> ">
+                <span class="title"><%= blogs[i].title %> </span><br>
+                <span class="snippet"><%= blogs[i].snippet %></span>
+            </a>
+        <% }  %>
+    </div>
+    <%- include('./particals/footer.ejs') %>
+</body>
+</html>

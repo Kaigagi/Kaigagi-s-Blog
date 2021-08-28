@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="create-content.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <%- include('./particals/header.ejs') %> 
+    <div class="content">
+        <div class="title">Create Blog</div>
+        <form action="/create-blog" method="post" class="createForm">
+            <label for="title">TITLE</label>
+            <input type="text" class="title" name="title">
+            <label for="snippet">SNIPPET</label>
+            <input type="text" class="snippet" name="snippet">
+            <label for="content">CONTENT</label>
+            <input type="text" class="content" name="content">
+            <button type="submit">Create</button>
+        </form>
+    </div>
+    <%- include('./particals/footer.ejs') %>
+</body>
+</html>

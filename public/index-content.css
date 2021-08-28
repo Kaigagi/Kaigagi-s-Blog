@@ -1,0 +1,21 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+    margin-top: 30px;
+}
+.blog{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    border-left: red 5px solid;
+    padding-left: 10px;
+    height: 3em;
+}
+a.blog:visited,a.blog:link{
+    text-decoration: none;
+    color: black;
+}
+.title{
+    font-size: 30px;
+}

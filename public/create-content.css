@@ -1,0 +1,35 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.title{
+    font-size: 25px;
+    margin: 10px;
+}
+.createForm{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin: 10px;
+}
+input{
+    margin: 10px;
+    width: 50vw;
+}
+input.title{
+    height: 20px;
+}
+input.snippet{
+    height: 100px;
+}
+input.content{
+    height: 200px;
+}
+button{
+    width: 20vw;
+    height: 40px;
+    position: relative;
+    left: 50%;
+}
